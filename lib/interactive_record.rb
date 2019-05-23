@@ -56,7 +56,7 @@ class InteractiveRecord
     DB[:conn].execute(sql, name)
   end
   
-  def self.find_by(attribute)
+  def self.find_by(attribute_hash)
     values = attribute.to_a.first  
     sql = <<-SQL
       SELECT * FROM #{table_name}
